@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX PRECISION | Global Premium Furniture & Cabinet Hardware Wholesale</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // High-end Navy
+                        secondary: '#0f172a', // Slate 900
+                        accent: '#10b981', // WhatsApp & trust green
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .wa-floating {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .wa-floating:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+            background-color: #128c7e;
+        }
+        /* Email Popup Styles */
+        .email-popup-overlay {
+            position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px); z-index: 2000;
+            display: none; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .email-popup-overlay.active { display: flex; opacity: 1; }
+        .email-popup {
+            background: white; border-radius: 24px; padding: 40px;
+            max-width: 480px; width: 90%; box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            transform: scale(0.9); transition: transform 0.3s ease;
+            position: relative;
+        }
+        .email-popup-overlay.active .email-popup { transform: scale(1); }
+        .email-popup-close {
+            position: absolute; top: 16px; right: 20px;
+            font-size: 24px; color: #94a3b8; cursor: pointer;
+            background: none; border: none; line-height: 1;
+        }
+        .email-popup-close:hover { color: #475569; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Floating WhatsApp Call to Action -->
+    <a href="https://wa.me/8613570313075?text=Hi,%20I'm%20interested%20in%20your%20furniture%20hardware.%20Please%20send%20me%20the%20wholesale%20catalog%20and%20price%20list." 
+       class="wa-floating font-semibold text-sm tracking-wide" target="_blank">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.9 5.86L2.61 21.6c-.1.3.1.6.4.5l3.89-1.29c1.61 1.01 3.51 1.6 5.5 1.6 5.52 0 10-4.48 10-10S17.524 2 12.004 2zm5.72 14.15c-.24.68-1.21 1.25-1.68 1.29-.44.04-.97.06-2.14-.38-1.57-.59-2.58-2.19-2.66-2.3-.08-.11-.64-.85-.64-1.63 0-.78.41-1.16.55-1.32.14-.16.32-.2.43-.2.11 0 .22.01.32.01.11 0 .25-.04.39.29.15.34.49 1.21.54 1.3.05.09.08.2.02.31-.06.11-.09.18-.18.29-.09.11-.19.24-.27.32-.09.1-.19.2-.08.38.11.18.49.81 1.05 1.35.72.69 1.33.91 1.52.99.19.08.3-.01.41-.13.11-.12.49-.57.62-.77.13-.2.27-.17.41-.12.15.05.95.45 1.11.52.16.08.27.12.31.2.04.08.04.47-.2.15z"/>
+        </svg>
+        Inquiry on WhatsApp
+    </a>
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-primary text-white text-xs py-2 px-6 flex justify-between items-center font-medium">
+        <p>⚡ High-Performance Furniture Hardware | OEM & ODM Verified Supplier</p>
+        <div class="hidden md:flex gap-6">
+            <span>📞 WhatsApp: +86 135 7031 3075</span>
+            <span>✉️ Email: info@apex-hardware.com</span>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 border-b border-slate-200 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 bg-gradient-to-tr from-primary to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-all">
+                    <span class="text-white font-extrabold text-lg tracking-wider">AP</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold tracking-tight text-secondary leading-none">APEX PRECISION</span>
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-0.5">Hardware Solutions</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="index.html" class="text-primary hover:text-primary transition">Home</a>
+                <div class="relative group py-2">
+                    <span class="cursor-pointer hover:text-primary transition flex items-center gap-1">
+                        Products
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                    <div class="absolute left-0 top-full mt-2 w-56 bg-white border border-slate-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                        <a href="gas-springs.html" class="block px-4 py-3 hover:bg-slate-50 border-b border-slate-100 text-slate-700 hover:text-primary transition">Pneumatic Gas Springs</a>
+                        <a href="cabinet-bouncers.html" class="block px-4 py-3 hover:bg-slate-50 border-b border-slate-100 text-slate-700 hover:text-primary transition">Cabinet Bouncers</a>
+                        <a href="linkage-hardware.html" class="block px-4 py-3 hover:bg-slate-50 text-slate-700 hover:text-primary transition">Sliding Braces & Hanging Codes</a>
+                    </div>
+                </div>
+                <a href="#why-us" class="hover:text-primary transition">Why Choose Us</a>
+                <a href="#about" class="hover:text-primary transition">About Us</a>
+                <a href="#contact" class="hover:text-primary transition">Contact</a>
+            </nav>
+
+            <!-- Action CTA -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/8613570313075" 
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-blue-700 text-white font-bold text-sm px-6 py-3 rounded-full hover:shadow-lg hover:shadow-blue-500/20 active:scale-95 transition-all duration-300">
+                    Request a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3">
+            <a href="index.html" class="block font-semibold text-primary">Home</a>
+            <div class="space-y-1.5 pl-2">
+                <p class="text-xs text-slate-400 font-bold uppercase">Products</p>
+                <a href="gas-springs.html" class="block pl-2 text-sm text-slate-600 font-medium hover:text-primary">Pneumatic Gas Springs</a>
+                <a href="cabinet-bouncers.html" class="block pl-2 text-sm text-slate-600 font-medium hover:text-primary">Cabinet Bouncers</a>
+                <a href="linkage-hardware.html" class="block pl-2 text-sm text-slate-600 font-medium hover:text-primary">Sliding Braces & Hanging Codes</a>
+            </div>
+            <a href="#why-us" class="block font-semibold text-slate-600 hover:text-primary">Why Choose Us</a>
+            <a href="#about" class="block font-semibold text-slate-600 hover:text-primary">About Us</a>
+            <a href="#contact" class="block font-semibold text-slate-600 hover:text-primary">Contact</a>
+            <a href="https://wa.me/8613570313075" class="block text-center bg-primary text-white font-bold py-3 rounded-xl">Inquire on WhatsApp</a>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="relative bg-gradient-to-tr from-slate-900 to-slate-800 text-white overflow-hidden py-24 lg:py-36 px-6">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                    🏆 Global Wholesale Partner
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                    Premium Motion & Cabinet Hardware <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Manufactured with Precision</span>
+                </h1>
+                <p class="mt-6 text-slate-300 text-base lg:text-lg leading-relaxed max-w-xl">
+                    Apex Precision specializes in high-durability pneumatic gas springs, silent push-to-open rebound devices, and architectural sliding linkages. Partnering with top-tier furniture manufacturers worldwide.
+                </p>
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="#categories" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 hover:-translate-y-0.5 transition duration-300">
+                        Explore Products
+                    </a>
+                    <a href="https://wa.me/8613570313075?text=Hello!%20I'm%20interested%20in%20becoming%20a%20distributor.%20Please%20provide%20pricing%20details." 
+                       class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-8 py-4 rounded-xl hover:-translate-y-0.5 transition duration-300 flex items-center gap-2">
+                        Become a Distributor ✉️
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Product Gallery -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=400" alt="Kitchen Cabinetry" class="rounded-xl mb-4 w-full h-40 object-cover">
+                        <h4 class="font-bold text-sm text-slate-200">Modern Seamless Cabinets</h4>
+                        <p class="text-xs text-slate-400 mt-1">Optimal space utilization and clean designs.</p>
+                    </div>
+                    <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl">
+                        <span class="text-3xl font-extrabold text-blue-400">50,000+</span>
+                        <h4 class="font-bold text-sm text-slate-200 mt-2">Tested Cycles</h4>
+                        <p class="text-xs text-slate-400 mt-1">Tested for flawless operation, ensuring reliability.</p>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl">
+                        <span class="text-3xl font-extrabold text-emerald-400">20N-200N</span>
+                        <h4 class="font-bold text-sm text-slate-200 mt-2">Adjustable Force</h4>
+                        <p class="text-xs text-slate-400 mt-1">Wide range for cabinet flap structures.</p>
+                    </div>
+                    <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400" alt="Custom Furniture" class="rounded-xl mb-4 w-full h-40 object-cover">
+                        <h4 class="font-bold text-sm text-slate-200">Minimalist Furniture Hardware</h4>
+                        <p class="text-xs text-slate-400 mt-1">ABS & POM durable engineering plastics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-white border-b border-slate-200 py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center md:border-r border-slate-100 last:border-0">
+                <p class="text-3xl lg:text-4xl font-extrabold text-primary">OEM / ODM</p>
+                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Full Service Integration</p>
+            </div>
+            <div class="text-center md:border-r border-slate-100 last:border-0">
+                <p class="text-3xl lg:text-4xl font-extrabold text-primary">5 Colors</p>
+                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Anodized Finishes</p>
+            </div>
+            <div class="text-center md:border-r border-slate-100 last:border-0">
+                <p class="text-3xl lg:text-4xl font-extrabold text-primary">100% QC</p>
+                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Tested In-House</p>
+            </div>
+            <div class="text-center md:border-r border-slate-100 last:border-0">
+                <p class="text-3xl lg:text-4xl font-extrabold text-primary">Global Air</p>
+                <p class="text-xs text-slate-400 font-bold uppercase mt-1">Express Shipping</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Category Explorer -->
+    <section id="categories" class="py-24 px-6 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs text-primary font-bold uppercase tracking-widest">Our Specialties</span>
+                <h2 class="text-3xl font-extrabold text-secondary mt-2">Explore Premium Categories</h2>
+                <p class="text-slate-500 mt-3">We supply top-tier hardware solutions with precise technical specs. Click on a category to explore complete catalog and parameters.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gas Springs -->
+                <div class="bg-white rounded-3xl border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition duration-500 flex flex-col justify-between group">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-secondary group-hover:text-primary transition-colors mb-4">Pneumatic Gas Springs</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Advanced pneumatic struts with smooth damper deceleration mechanisms. Tailored support forces ranging from 20N to 200N for flawless lid and flap openings.
+                        </p>
+                        <ul class="text-xs font-semibold text-slate-600 space-y-2.5 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> 5 Exquisite Colors (Silver, Gold, Champagne, Matte Black, Gray)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Core Choice (Durable Copper Core vs Standard Plastic Core)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Stroke Specification: 91±1mm | Cylinder Diameters customizable
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <a href="gas-springs.html" class="block text-center bg-slate-100 hover:bg-primary hover:text-white text-slate-700 font-bold text-sm py-4 rounded-xl transition duration-300">
+                            Explore Gas Springs Series
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cabinet Bouncers -->
+                <div class="bg-white rounded-3xl border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition duration-500 flex flex-col justify-between group">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-secondary group-hover:text-accent transition-colors mb-4">Cabinet Bouncers</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Ultra-silent rebound devices engineered with ABS and POM premium plastics. Designed specifically to achieve handle-less minimalist aesthetics on cabinet doors.
+                        </p>
+                        <ul class="text-xs font-semibold text-slate-600 space-y-2.5 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Standard Cylindrical & Rectangular magnetic versions
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Double-Pronged & Compact heavy options for large doors
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Heavy-duty built-in springs ensuring 50,000+ actions
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <a href="cabinet-bouncers.html" class="block text-center bg-slate-100 hover:bg-accent hover:text-white text-slate-700 font-bold text-sm py-4 rounded-xl transition duration-300">
+                            Explore Bouncer Series
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Linkage Hardware -->
+                <div class="bg-white rounded-3xl border border-slate-200/60 overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition duration-500 flex flex-col justify-between group">
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-secondary group-hover:text-purple-600 transition-colors mb-4">Linkage & Brackets</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                            Architectural grade friction stays and wall mounting hardware. Manufactured with premium rust-proof steel and precise multi-joint geometry for ultimate support.
+                        </p>
+                        <ul class="text-xs font-semibold text-slate-600 space-y-2.5 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> 4-Bar Stainless Steel Window Sliding Hinges (Friction Stays)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Invisible Adjustable Hanging Codes (Heavy Duty brackets)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-500 text-lg">✓</span> Standard 13.5mm grooves | 8" & 10" sizes available
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-8 pb-8">
+                        <a href="linkage-hardware.html" class="block text-center bg-slate-100 hover:bg-purple-600 hover:text-white text-slate-700 font-bold text-sm py-4 rounded-xl transition duration-300">
+                            Explore Linkage & Stays
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800" alt="Factory CNC Precision" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-8 rounded-2xl shadow-xl hidden md:block max-w-xs border border-slate-800">
+                        <p class="text-emerald-400 font-bold text-lg">50,000+ Cycles</p>
+                        <p class="text-slate-400 text-xs mt-1">Guaranteed performance lifecycle tested on all mechanical parts.</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xs text-primary font-bold uppercase tracking-widest">Our Engineering Advantages</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-secondary mt-2">Engineered For Flawless Longevity</h2>
+                    <p class="text-slate-500 mt-4 leading-relaxed">
+                        We don't cut corners. From material selection to surface finish treatments, Apex Precision implements strict quality monitoring parameters to supply global furniture brands.
+                    </p>
+
+                    <div class="space-y-6 mt-8">
+                        <div class="flex items-start gap-4">
+                            <span class="p-3 bg-blue-50 text-primary rounded-xl">🔒</span>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Extensive Lifecycle Testing</h4>
+                                <p class="text-sm text-slate-500 mt-1">Every batch of door rebound devices and gas springs must pass continuous wear tests ensuring durability without force mitigation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="p-3 bg-emerald-50 text-accent rounded-xl">🔧</span>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Robust Raw Materials</h4>
+                                <p class="text-sm text-slate-500 mt-1">Using specialized POM & ABS plastics with dense fiber properties and heavy-gauge electroplated steel rods to withstand humidity and dust.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="p-3 bg-purple-50 text-purple-600 rounded-xl">⚙️</span>
+                            <div>
+                                <h4 class="font-bold text-secondary text-lg">Flexible OEM Customization</h4>
+                                <p class="text-sm text-slate-500 mt-1">From non-standard bracket connections to customized pneumatic support lengths, our development team caters to custom industrial specs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Capability Intro / About Us -->
+    <section id="about" class="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div>
+                <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Global Sourcing Partner</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold mt-2">B2B Manufacturing Excellence & Logistics Coordination</h2>
+                <p class="text-slate-400 mt-6 leading-relaxed">
+                    At Apex Precision, we bridge the gap between high-volume hardware production and streamlined international supply chains. With air freight connections and prompt sampling, we help wholesale buyers, distributors, and custom designers secure custom motion components directly without communication overhead.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-10">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-bold text-xl text-slate-100">100% Secure</h4>
+                        <p class="text-xs text-slate-400 mt-1">Guaranteed product specifications and strict non-disclosure compliance for custom molds.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-500 pl-4">
+                        <h4 class="font-bold text-xl text-slate-100">Rapid Delivery</h4>
+                        <p class="text-xs text-slate-400 mt-1">Consolidated air and ocean freight shipments globally with custom export paperwork.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-xl font-bold mb-4">Request a Wholesale Quotation</h3>
+                    <p class="text-sm text-slate-400 mb-6">Need bulk volumes or custom product parameters? Tell us your specifications and receive a free quote within 12 hours.</p>
+                    <form id="apexQuoteForm" class="space-y-4" onsubmit="handleApexQuoteSubmit(event)">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Company Email *</label>
+                            <input type="email" id="quoteEmail" required placeholder="you@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Your Name</label>
+                            <input type="text" id="quoteName" placeholder="John Smith" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Category of Interest</label>
+                            <select id="quoteCategory" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
+                                <option>Pneumatic Support Gas Springs</option>
+                                <option>Cabinet Bouncers (Push-to-Open)</option>
+                                <option>Hanging Codes & Sliding Window friction stays</option>
+                                <option>Custom Mechanical Hardware</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Quantity Requirement (Est.)</label>
+                            <input type="text" id="quoteQuantity" placeholder="e.g. 5,000 units" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
+                        </div>
+                        <button type="submit" id="quoteSubmitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-600/20 mt-4">
+                            Submit Inquiry Form
+                        </button>
+                        <p class="text-xs text-slate-500 text-center">We'll reply via email & WhatsApp within 12 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Procurement Process -->
+    <section class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs text-primary font-bold uppercase tracking-widest">Our Service Flow</span>
+                <h2 class="text-3xl font-extrabold text-secondary mt-2">Streamlined 4-Step B2B Procurement</h2>
+                <p class="text-slate-500 mt-3 text-sm">We make sourcing furniture hardware painless, fast, and completely risk-free for international B2B buyers.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/50 shadow-sm relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-primary text-white font-extrabold rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/10">1</div>
+                    <h4 class="font-extrabold text-lg text-secondary mt-2 mb-3">Product Selection</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Browse our categories and consult on WhatsApp. Our hardware experts will match your specific cabinetry dimensions and technical requirements.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/50 shadow-sm relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-emerald-500 text-white font-extrabold rounded-xl flex items-center justify-center shadow-lg shadow-emerald-500/10">2</div>
+                    <h4 class="font-extrabold text-lg text-secondary mt-2 mb-3">Sample Verification</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Order sample units to test on your wood doors. Sample costs are 100% refundable upon your first bulk order, ensuring a risk-free matching process.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/50 shadow-sm relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-amber-500 text-white font-extrabold rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/10">3</div>
+                    <h4 class="font-extrabold text-lg text-secondary mt-2 mb-3">Custom Bulk Order</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Finalize order sizes, customize configurations (cores/springs/plates), select customized boxes/packaging, and lock in wholesale pricing.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/50 shadow-sm relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-purple-600 text-white font-extrabold rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/10">4</div>
+                    <h4 class="font-extrabold text-lg text-secondary mt-2 mb-3">Double QC & Dispatch</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">
+                        Every batch undergoes rigorous quality-control checks before packing. Securely palletized and dispatched via global air/ocean freight corridors.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick WhatsApp Contact / Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-xs text-accent font-bold uppercase tracking-widest">Connect with Sales Expert</span>
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-secondary mt-2">Skip the Forms & Connect Instantly via WhatsApp</h2>
+            <p class="text-slate-500 mt-4 leading-relaxed max-w-xl mx-auto">
+                Get high-quality photos, raw dimensional CAD models, custom packaging quotes, and wholesale catalogs directly inside WhatsApp chat. We support fast B2B communication.
+            </p>
+            
+            <div class="mt-10 inline-flex flex-col sm:flex-row items-center gap-4 justify-center">
+                <a href="https://wa.me/8613570313075?text=Hello,%20I'm%20visiting%20your%20website.%20I%20would%20like%20to%20get%20more%20details%20about%20your%20products." 
+                   class="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold px-8 py-4.5 rounded-2xl shadow-xl shadow-emerald-500/20 text-base transition-all duration-300 transform hover:-translate-y-0.5" target="_blank">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.9 5.86L2.61 21.6c-.1.3.1.6.4.5l3.89-1.29c1.61 1.01 3.51 1.6 5.5 1.6 5.52 0 10-4.48 10-10S17.524 2 12.004 2zm5.72 14.15c-.24.68-1.21 1.25-1.68 1.29-.44.04-.97.06-2.14-.38-1.57-.59-2.58-2.19-2.66-2.3-.08-.11-.64-.85-.64-1.63 0-.78.41-1.16.55-1.32.14-.16.32-.2.43-.2.11 0 .22.01.32.01.11 0 .25-.04.39.29.15.34.49 1.21.54 1.3.05.09.08.2.02.31-.06.11-.09.18-.18.29-.09.11-.19.24-.27.32-.09.1-.19.2-.08.38.11.18.49.81 1.05 1.35.72.69 1.33.91 1.52.99.19.08.3-.01.41-.13.11-.12.49-.57.62-.77.13-.2.27-.17.41-.12.15.05.95.45 1.11.52.16.08.27.12.31.2.04.08.04.47-.2.15z"/></svg>
+                    Contact +86 135 7031 3075 (WhatsApp)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Capture Popup -->
+    <div id="emailPopup" class="email-popup-overlay">
+        <div class="email-popup">
+            <button class="email-popup-close" onclick="closeEmailPopup()">&times;</button>
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Get Our Wholesale Catalog</h3>
+                <p class="text-sm text-slate-500 mt-2">Download the complete 2026 product catalog with MOQ pricing. No spam, unsubscribe anytime.</p>
+            </div>
+            <form id="catalogForm" class="space-y-4" onsubmit="handleCatalogSubmit(event)">
+                <input type="email" id="catalogEmail" required placeholder="Enter your business email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition">
+                <button type="submit" id="catalogSubmitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition">
+                    📩 Send Catalog to My Email
+                </button>
+                <p class="text-xs text-slate-400 text-center">You'll also receive our seasonal new arrivals & volume discount updates.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-16 px-6 text-slate-400 border-t border-slate-900 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">AP</span>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight text-white">APEX PRECISION</span>
+                </a>
+                <p class="max-w-sm text-slate-500 leading-relaxed text-xs">
+                    Your reliable global supply partner for verified mechanical & cabinetry motion hardware components. Streamlined design, reliable custom sizing, rapid B2B deliveries.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="gas-springs.html" class="hover:text-white transition">Gas Springs</a></li>
+                        <li><a href="cabinet-bouncers.html" class="hover:text-white transition">Cabinet Bouncers</a></li>
+                        <li><a href="linkage-hardware.html" class="hover:text-white transition">Sliding Braces</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Inquiry Support</h5>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="https://wa.me/8613570313075" class="hover:text-white transition flex items-center gap-1.5">WhatsApp Inquiry 📱</a></li>
+                        <li><span class="text-slate-500">Response &lt; 12 hours ⚡</span></li>
+                        <li><span class="text-slate-500">Free B2B Sampling 📦</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-slate-900 mt-16 pt-8 text-center text-xs text-slate-600">
+            &copy; 2026 Apex Precision Hardware Solutions. All rights reserved. <br>
+            <span class="italic">All original product renders and drawings are catalog-matched specifications. Contact us directly for bulk wholesaling packages.</span>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Elements -->
+    <script>
+        // Drawer toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const drawer = document.getElementById('mobile-drawer');
+        btn.addEventListener('click', () => {
+            drawer.classList.toggle('hidden');
+        });
+
+        // Email Popup Logic
+        let popupShown = false;
+        function showEmailPopup() {
+            if (popupShown) return;
+            const popup = document.getElementById('emailPopup');
+            popup.classList.add('active');
+            popupShown = true;
+        }
+        function closeEmailPopup() {
+            document.getElementById('emailPopup').classList.remove('active');
+        }
+        // Show popup after 15 seconds or on exit intent
+        setTimeout(showEmailPopup, 15000);
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 10) showEmailPopup();
+        });
+
+        // Quote form: show success + open WhatsApp
+        function handleApexQuoteSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('quoteEmail').value;
+            const name = document.getElementById('quoteName').value;
+            const category = document.getElementById('quoteCategory').value;
+            const quantity = document.getElementById('quoteQuantity').value;
+            const btn = document.getElementById('quoteSubmitBtn');
+            btn.innerHTML = '✓ Submitted!';
+            btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            btn.classList.add('bg-slate-400');
+            btn.disabled = true;
+            let msg = `Hi! New wholesale inquiry from APEX site:\nEmail: ${email}`;
+            if (name) msg += `\nName: ${name}`;
+            msg += `\nCategory: ${category}`;
+            if (quantity) msg += `\nQuantity: ${quantity}`;
+            msg += `\nPlease send me a quote. Thank you!`;
+            window.open('https://wa.me/8613570313075?text=' + encodeURIComponent(msg), '_blank');
+            setTimeout(() => {
+                document.getElementById('quoteEmail').value = '';
+                document.getElementById('quoteName').value = '';
+                document.getElementById('quoteQuantity').value = '';
+                btn.innerHTML = 'Submit Inquiry Form';
+                btn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                btn.classList.remove('bg-slate-400');
+                btn.disabled = false;
+            }, 3000);
+        }
+
+        // Catalog popup form: show success + open WhatsApp
+        function handleCatalogSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('catalogEmail').value;
+            const btn = document.getElementById('catalogSubmitBtn');
+            btn.innerHTML = '✓ Submitted!';
+            btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            btn.classList.add('bg-slate-400');
+            btn.disabled = true;
+            const msg = `Hi! New catalog request from: ${email} (from APEX popup). Please send me the wholesale catalog and price list.`;
+            window.open('https://wa.me/8613570313075?text=' + encodeURIComponent(msg), '_blank');
+            setTimeout(() => {
+                closeEmailPopup();
+                document.getElementById('catalogEmail').value = '';
+                btn.innerHTML = '📩 Send Catalog to My Email';
+                btn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                btn.classList.remove('bg-slate-400');
+                btn.disabled = false;
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
