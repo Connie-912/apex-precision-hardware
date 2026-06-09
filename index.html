@@ -108,7 +108,7 @@
             </div>
             <h3 class="text-xl font-bold text-slate-900 mb-2">Scan to WhatsApp Us</h3>
             <p class="text-sm text-slate-500 mb-6">Scan with your phone camera or WhatsApp to start chatting instantly</p>
-            <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code" class="w-52 h-52 mx-auto rounded-xl border-4 border-slate-100 mb-4">
+            <img src="images/whatsapp-qr.png" alt="WhatsApp QR Code" class="max-w-52 max-h-72 w-auto h-auto object-contain mx-auto rounded-xl border-4 border-slate-100 mb-4">
             <div class="flex gap-3 justify-center">
                 <a href="https://wa.me/8613570313075?text=Hi,%20I'm%20interested%20in%20your%20furniture%20hardware.%20Please%20send%20me%20the%20wholesale%20catalog%20and%20price%20list." target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition text-sm">
                     💬 Open WhatsApp
@@ -435,36 +435,18 @@
                 </div>
             </div>
             <div>
-                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700">
-                    <h3 class="text-xl font-bold mb-4">Request a Wholesale Quotation</h3>
-                    <p class="text-sm text-slate-400 mb-6">Need bulk volumes or custom product parameters? Tell us your specifications and receive a free quote within 12 hours.</p>
-                    <form id="apexQuoteForm" class="space-y-4" onsubmit="handleApexQuoteSubmit(event)">
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Company Email *</label>
-                            <input type="email" id="quoteEmail" required placeholder="you@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Your Name</label>
-                            <input type="text" id="quoteName" placeholder="John Smith" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Category of Interest</label>
-                            <select id="quoteCategory" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
-                                <option>Pneumatic Support Gas Springs</option>
-                                <option>Cabinet Bouncers (Push-to-Open)</option>
-                                <option>Hanging Codes & Sliding Window friction stays</option>
-                                <option>Custom Mechanical Hardware</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-slate-300 uppercase mb-1">Quantity Requirement (Est.)</label>
-                            <input type="text" id="quoteQuantity" placeholder="e.g. 5,000 units" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition text-white">
-                        </div>
-                        <button type="submit" id="quoteSubmitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-600/20 mt-4">
-                            Submit Inquiry Form
-                        </button>
-                        <p class="text-xs text-slate-500 text-center">We'll reply via email & WhatsApp within 12 hours.</p>
-                    </form>
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 text-center">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.004 2C6.48 2 2 6.48 2 12c0 2.17.7 4.19 1.9 5.86L2.61 21.6c-.1.3.1.6.4.5l3.89-1.29c1.61 1.01 3.51 1.6 5.5 1.6 5.52 0 10-4.48 10-10S17.524 2 12.004 2zm5.72 14.15c-.24.68-1.21 1.25-1.68 1.29-.44.04-.97.06-2.14-.38-1.57-.59-2.58-2.19-2.66-2.3-.08-.11-.64-.85-.64-1.63 0-.78.41-1.16.55-1.32.14-.16.32-.2.43-.2.11 0 .22.01.32.01.11 0 .25-.04.39.29.15.34.49 1.21.54 1.3.05.09.08.2.02.31-.06.11-.09.18-.18.29-.09.11-.19.24-.27.32-.09.1-.19.2-.08.38.11.18.49.81 1.05 1.35.72.69 1.33.91 1.52.99.19.08.3-.01.41-.13.11-.12.49-.57.62-.77.13-.2.27-.17.41-.12.15.05.95.45 1.11.52.16.08.27.12.31.2.04.08.04.47-.2.15z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Get Instant Quote on WhatsApp</h3>
+                    <p class="text-sm text-slate-400 mb-6">Scan the QR code or click the button below to chat with us directly. We'll send you the catalog, pricing, and samples info within minutes.</p>
+                    <button onclick="openWhatsAppQR()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-green-600/20 mb-3">
+                        💬 Chat on WhatsApp
+                    </button>
+                    <p class="text-xs text-slate-500">+86 135 7031 3075 · Reply within 12 hours</p>
                 </div>
             </div>
         </div>
@@ -538,26 +520,7 @@
         </div>
     </section>
 
-    <!-- Email Capture Popup -->
-    <div id="emailPopup" class="email-popup-overlay">
-        <div class="email-popup">
-            <button class="email-popup-close" onclick="closeEmailPopup()">&times;</button>
-            <div class="text-center mb-6">
-                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900">Get Our Wholesale Catalog</h3>
-                <p class="text-sm text-slate-500 mt-2">Download the complete 2026 product catalog with MOQ pricing. No spam, unsubscribe anytime.</p>
-            </div>
-            <form id="catalogForm" class="space-y-4" onsubmit="handleCatalogSubmit(event)">
-                <input type="email" id="catalogEmail" required placeholder="Enter your business email" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-blue-500 transition">
-                <button type="submit" id="catalogSubmitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition">
-                    📩 Send Catalog to My Email
-                </button>
-                <p class="text-xs text-slate-400 text-center">You'll also receive our seasonal new arrivals & volume discount updates.</p>
-            </form>
-        </div>
-    </div>
+
 
     <!-- Footer -->
     <footer class="bg-slate-950 py-16 px-6 text-slate-400 border-t border-slate-900 text-sm">
@@ -609,23 +572,6 @@
             drawer.classList.toggle('hidden');
         });
 
-        // Email Popup Logic
-        let popupShown = false;
-        function showEmailPopup() {
-            if (popupShown) return;
-            const popup = document.getElementById('emailPopup');
-            popup.classList.add('active');
-            popupShown = true;
-        }
-        function closeEmailPopup() {
-            document.getElementById('emailPopup').classList.remove('active');
-        }
-        // Show popup after 15 seconds or on exit intent
-        setTimeout(showEmailPopup, 15000);
-        document.addEventListener('mouseleave', (e) => {
-            if (e.clientY < 10) showEmailPopup();
-        });
-
         // WhatsApp QR Code modal
         function openWhatsAppQR() {
             document.getElementById('waQrOverlay').classList.add('active');
@@ -636,55 +582,7 @@
             document.body.style.overflow = '';
         }
 
-        // Quote form: show success + open WhatsApp
-        function handleApexQuoteSubmit(e) {
-            e.preventDefault();
-            const email = document.getElementById('quoteEmail').value;
-            const name = document.getElementById('quoteName').value;
-            const category = document.getElementById('quoteCategory').value;
-            const quantity = document.getElementById('quoteQuantity').value;
-            const btn = document.getElementById('quoteSubmitBtn');
-            btn.innerHTML = '✓ Submitted!';
-            btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-            btn.classList.add('bg-slate-400');
-            btn.disabled = true;
-            let msg = `Hi! New wholesale inquiry from APEX site:\nEmail: ${email}`;
-            if (name) msg += `\nName: ${name}`;
-            msg += `\nCategory: ${category}`;
-            if (quantity) msg += `\nQuantity: ${quantity}`;
-            msg += `\nPlease send me a quote. Thank you!`;
-            window.open('https://wa.me/8613570313075?text=' + encodeURIComponent(msg), '_blank');
-            setTimeout(() => {
-                document.getElementById('quoteEmail').value = '';
-                document.getElementById('quoteName').value = '';
-                document.getElementById('quoteQuantity').value = '';
-                btn.innerHTML = 'Submit Inquiry Form';
-                btn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-                btn.classList.remove('bg-slate-400');
-                btn.disabled = false;
-            }, 3000);
-        }
 
-        // Catalog popup form: show success + open WhatsApp
-        function handleCatalogSubmit(e) {
-            e.preventDefault();
-            const email = document.getElementById('catalogEmail').value;
-            const btn = document.getElementById('catalogSubmitBtn');
-            btn.innerHTML = '✓ Submitted!';
-            btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-            btn.classList.add('bg-slate-400');
-            btn.disabled = true;
-            const msg = `Hi! New catalog request from: ${email} (from APEX popup). Please send me the wholesale catalog and price list.`;
-            window.open('https://wa.me/8613570313075?text=' + encodeURIComponent(msg), '_blank');
-            setTimeout(() => {
-                closeEmailPopup();
-                document.getElementById('catalogEmail').value = '';
-                btn.innerHTML = '📩 Send Catalog to My Email';
-                btn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-                btn.classList.remove('bg-slate-400');
-                btn.disabled = false;
-            }, 3000);
-        }
     </script>
 </body>
 </html>
